@@ -61,3 +61,23 @@ void displayDetails(){
     	area= Math.PI * radius * radius;
 		return area;
 
+    }
+
+    void inputDetails(Scanner scanner) {
+        System.out.print("Enter the radius of the circle: ");
+        radius = scanner.nextDouble();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Rectangle rectangle = new Rectangle();
+        rectangle.inputDetails(scanner);
+        rectangle.displayDetails();
+        Circle circle = new Circle();
+        circle.inputDetails(scanner);
+        circle.displayDetails();
+        scanner.close();
+    }
+}
